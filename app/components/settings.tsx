@@ -240,53 +240,53 @@ export function Settings() {
     );
   }
 
-  const usage = {
-    used: updateStore.used,
-    subscription: updateStore.subscription,
-  };
-  const [loadingUsage, setLoadingUsage] = useState(false);
-  function checkUsage(force = false) {
-    setLoadingUsage(true);
-    updateStore.updateUsage(force).finally(() => {
-      setLoadingUsage(false);
-    });
-  }
+//   const usage = {
+//     used: updateStore.used,
+//     subscription: updateStore.subscription,
+//   };
+//   const [loadingUsage, setLoadingUsage] = useState(false);
+//   function checkUsage(force = false) {
+//     setLoadingUsage(true);
+//     updateStore.updateUsage(force).finally(() => {
+//       setLoadingUsage(false);
+//     });
+//   }
 
-  const accessStore = useAccessStore();
-  const enabledAccessControl = useMemo(
-    () => accessStore.enabledAccessControl(),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  );
+//   const accessStore = useAccessStore();
+//   const enabledAccessControl = useMemo(
+//     () => accessStore.enabledAccessControl(),
+//     // eslint-disable-next-line react-hooks/exhaustive-deps
+//     [],
+//   );
 
-  const promptStore = usePromptStore();
-  const builtinCount = SearchService.count.builtin;
-  const customCount = promptStore.getUserPrompts().length ?? 0;
-  const [shouldShowPromptModal, setShowPromptModal] = useState(false);
+//   const promptStore = usePromptStore();
+//   const builtinCount = SearchService.count.builtin;
+//   const customCount = promptStore.getUserPrompts().length ?? 0;
+//   const [shouldShowPromptModal, setShowPromptModal] = useState(false);
 
-  const showUsage = accessStore.isAuthorized();
-  useEffect(() => {
-    // checks per minutes
-    checkUpdate();
-    showUsage && checkUsage();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    const keydownEvent = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        navigate(Path.Home);
-      }
-    };
-    document.addEventListener("keydown", keydownEvent);
-    return () => {
-      document.removeEventListener("keydown", keydownEvent);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+//   const showUsage = accessStore.isAuthorized();
+//   useEffect(() => {
+//     // checks per minutes
+//     checkUpdate();
+//     showUsage && checkUsage();
+//     // eslint-disable-next-line react-hooks/exhaustive-deps
 //   }, []);
 
-  return (
-    <ErrorBoundary>
+//   useEffect(() => {
+//     const keydownEvent = (e: KeyboardEvent) => {
+//       if (e.key === "Escape") {
+//         navigate(Path.Home);
+//       }
+//     };
+//     document.addEventListener("keydown", keydownEvent);
+//     return () => {
+//       document.removeEventListener("keydown", keydownEvent);
+//     };
+//     // eslint-disable-next-line react-hooks/exhaustive-deps
+//    }, []);
+
+//   return (
+//     <ErrorBoundary>
       <div className="window-header">
         <div className="window-header-title">
           <div className="window-header-main-title">
