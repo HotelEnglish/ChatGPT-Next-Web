@@ -10,7 +10,8 @@ import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
-import share from "../icons/share.svg";
+import shareIcon from "../icons/share.svg";
+import favoIcon from "../icons/favo.svg";
 import Locale from "../locales";
 
 import { useAppConfig, useChatStore } from "../store";
@@ -124,7 +125,7 @@ export function SideBar(props: { className?: string }) {
          助力酒店管理，提升英语能力
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <ChatGptIcon />
+          <favoIcon />
         </div>
       </div>
 
