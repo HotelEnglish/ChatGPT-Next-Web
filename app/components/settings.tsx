@@ -283,7 +283,7 @@ export function Settings() {
       document.removeEventListener("keydown", keydownEvent);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+//   }, []);
 
   return (
     <ErrorBoundary>
