@@ -57,7 +57,7 @@ export class ErrorBoundary extends React.Component<any, IErrorBoundaryState> {
             </a>
             <IconButton
               icon={<ResetIcon />}
-              text="清理所有数据
+              text="清理所有数据"
               onClick={async () => {
                 if (await showConfirm(Locale.Settings.Danger.Reset.Confirm)) {
                   this.clearAndSaveData();
