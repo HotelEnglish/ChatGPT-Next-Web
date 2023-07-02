@@ -73,3 +73,4 @@ export class ErrorBoundary extends React.Component<any, IErrorBoundaryState> {
     return this.props.children;
   }
 }
+
