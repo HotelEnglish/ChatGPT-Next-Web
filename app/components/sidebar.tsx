@@ -236,7 +236,7 @@ export function SideBar(props: { className?: string }) {
       {...props}
     >
       <SideBarHeader
-        title="龚老师"
+        title="涨龚资"
         subTitle="让我这部分人先富起来."
         logo={<ChatGptIcon />}
         shouldNarrow={shouldNarrow}
